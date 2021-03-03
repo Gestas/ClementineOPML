@@ -28,6 +28,7 @@ def export(args):
     podcasts = get_podcasts(db_path=db_path)
     xml = build_xml(podcasts=podcasts)
     write_to_disk(xml=xml, output_path=output_path)
+    print(f'Done -> {str(output_path)}')
 
 
 def get_podcasts(db_path):
