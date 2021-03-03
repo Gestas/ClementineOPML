@@ -1,7 +1,7 @@
 ## Simple OPML exporter for the Clementine Player
 http://www.clementine-player.org/
 
-Tested with Python3.9 on Ubuntu 20.04. Will likely work with earlier versions.
+Tested with Python3.9 on Ubuntu 20.04. Will likely work with earlier versions of Python.
 
 ### Usage - 
 ```usage: ClementineOPML.py [-h] [--clementine-db-path CLEMENTINE_DB_PATH] [--output-path OUTPUT_PATH]
