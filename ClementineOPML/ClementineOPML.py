@@ -11,6 +11,26 @@ from pathlib import Path
 from lxml.etree import Comment, Element, ElementTree, ParseError, SubElement
 
 
+def main():
+    parser = argparse.ArgumentParser(
+        description="Export podcast subscriptions from Clementine.",
+    )
+    parser.add_argument(
+        "--clementine-db-path",
+        type=Path,
+        default=None,
+        help="Path to the Clementine database. Defaults to the Clementine default.",
+    )
+    parser.add_argument(
+        "--output-path",
+        type=Path,
+        default=None,
+        help="Path to export the OPML file to. Defaults to ~/Clementine-Podcasts.opml",
+    )
+    args = parser.parse_args()
+    export(args=args)
+
+
 def export(args):
     db_path = args.clementine_db_path
     output_path = args.output_path
@@ -28,7 +48,7 @@ def export(args):
     podcasts = get_podcasts(db_path=db_path)
     xml = build_xml(podcasts=podcasts)
     write_to_disk(xml=xml, output_path=output_path)
-    print(f'Done -> {str(output_path)}')
+    print(f"Done -> {str(output_path)}")
 
 
 def get_podcasts(db_path):
@@ -112,20 +132,4 @@ def write_to_disk(xml, output_path):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Export podcast subscriptions from Clementine.",
-    )
-    parser.add_argument(
-        "--clementine-db-path",
-        type=Path,
-        default=None,
-        help="Path to the Clementine database. Defaults to the Clementine default.",
-    )
-    parser.add_argument(
-        "--output-path",
-        type=Path,
-        default=None,
-        help="Path to export the OPML file to. Defaults to ~/Clementine-Podcasts.opml",
-    )
-    args = parser.parse_args()
-    export(args=args)
+    main()

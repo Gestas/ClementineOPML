@@ -1,10 +1,20 @@
-## Simple OPML exporter for the Clementine Player
+# Simple OPML exporter for the Clementine Player
 http://www.clementine-player.org/
+Tested with Python3.8 on Ubuntu 20.04.
 
-Tested with Python3.9 on Ubuntu 20.04. Will likely work with earlier versions of Python.
-
+### Install
+**NOTE:** Using `pipx` is strongly recommended, https://pypi.org/project/pipx/.
+Pipx will create the required virtualenv and ensure that `ClementineOPML` is in your path. 
+```
+$ pipx install https://github.com/Gestas/ClementineOPML
+```
 ### Usage - 
-```usage: ClementineOPML.py [-h] [--clementine-db-path CLEMENTINE_DB_PATH] [--output-path OUTPUT_PATH]
+```
+# Can be run without any arguments - 
+$ ClementineOPML
+
+$ ClementineOPML -h
+usage: ClementineOPML [-h] [--clementine-db-path CLEMENTINE_DB_PATH] [--output-path OUTPUT_PATH]
 
 Export podcast subscriptions from Clementine.
 
@@ -16,13 +26,3 @@ optional arguments:
                         Path to export the OPML file to. Defaults to ~/Clementine-Podcasts.opml
 ```
 
-### Install - 
-**NOTE:** This example uses `pipx` to `virtualenv` because it's better. See [installing with pip](https://virtualenv.pypa.io/en/latest/installation.html#via-pip) if required.
-```
-pipx install virtualenv
-git clone https://github.com/Gestas/ClementineOPML
-cd ClementineOPML
-virtualenv venv --python $(which python3.9)
-chmod +x ClementineOPML.py
-./ClementineOPML.py
-```
