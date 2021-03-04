@@ -79,7 +79,7 @@ def find_db():
         return _windows_db_path
     else:
         print(
-            "ERROR: Could not locate the Clementine DB. Specify its location with `-i`"
+            "ERROR: Could not locate the Clementine DB. Specify its location with `--clementine-db-path`"
         )
         sys.exit(1)
 
