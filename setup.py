@@ -18,7 +18,7 @@ setup(
     url="https://github.com/Gestas/ClementineOPML",
     packages=["ClementineOPML"],
     long_description=read("README.md"),
-    python_requires='>=3.9',
+    python_requires='>=3.8',
     install_requires=['setuptools~=54.0.0', 'lxml~=4.6.2'],
     entry_points={
         "console_scripts": [
