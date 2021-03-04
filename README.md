@@ -3,7 +3,7 @@ http://www.clementine-player.org/
 
 Tested with Python3.8 on Ubuntu 20.04.
 
-### Install
+### Install -
 **NOTE:** Using `pipx` is strongly recommended, https://pypi.org/project/pipx/.
 Pipx will create the required virtualenv and ensure that `ClementineOPML` is in your path. 
 ```
