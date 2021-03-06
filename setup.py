@@ -11,7 +11,7 @@ setup(
     name="ClementineOPML",
     version="1.0",
     author="Craig Carl",
-    author_email="github-projects@gestas",
+    author_email="github-projects@gestas.net",
     description="Simple OPML exporter for the Clementine Player",
     license="MIT",
     keywords="OPML export Celementine",
